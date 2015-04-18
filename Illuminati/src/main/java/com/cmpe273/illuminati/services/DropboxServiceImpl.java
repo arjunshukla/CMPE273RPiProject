@@ -4,10 +4,9 @@ import com.dropbox.core.*;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServlet;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Locale;
 
 /**
@@ -48,15 +47,18 @@ public class DropboxServiceImpl extends HttpServlet implements DropboxService {
 
     @Override
     public void upload(DbxClient client) throws IOException, DbxException {
-        File inputFile = new File("hello.txt");
+        File folder = new File("D:/HelloFeatureIDE");
+        System.out.println("Reading files under the folder "+ folder.getAbsolutePath());
+        listFilesForFolder(folder, client);
+/*        File inputFile = new File(file.getName());
         FileInputStream inputStream = new FileInputStream(inputFile);
         try {
-            DbxEntry.File uploadedFile = client.uploadFile("/hello.txt",
+            DbxEntry.File uploadedFile = client.uploadFile("/D:/HelloFeatureIDE",
                     DbxWriteMode.add(), inputFile.length(), inputStream);
             System.out.println("Uploaded: " + uploadedFile.toString());
         } finally {
             inputStream.close();
-        }
+        }*/
     }
 
     @Override
@@ -77,6 +79,34 @@ public class DropboxServiceImpl extends HttpServlet implements DropboxService {
             System.out.println("Metadata: " + downloadedFile.toString());
         } finally {
             outputStream.close();
+        }
+    }
+
+    public void listFilesForFolder(final File folder, DbxClient client) throws IOException, DbxException {
+        String filepath = null;
+        String filepath1 = null;
+        for (final File fileEntry : folder.listFiles()) {
+            if (fileEntry.isDirectory()) {
+                // System.out.println("Reading files under the folder "+folder.getAbsolutePath());
+                listFilesForFolder(fileEntry, client);
+            } else {
+                if (fileEntry.isFile()) {
+                    System.out.println("Path= " + folder.getAbsolutePath().replaceAll("\\\\","/")+"/"+fileEntry.getName());
+                        //System.out.println("File= " + folder.getAbsolutePath()+ "\\" + fileEntry.getName());
+                    filepath1 = "/"+folder.getAbsolutePath().replaceAll("\\\\","/")+"/"+fileEntry.getName();
+                    filepath = folder.getAbsolutePath().replaceAll("\\\\","/")+"/"+fileEntry.getName();
+                    File inputFile = new File(filepath);
+                    FileInputStream inputStream = new FileInputStream(inputFile);
+                    try {
+                        DbxEntry.File uploadedFile = client.uploadFile(filepath1,
+                                DbxWriteMode.add(), inputFile.length(), inputStream);
+                        System.out.println("Uploaded: " + uploadedFile.toString());
+                    } finally {
+                        inputStream.close();
+                    }
+                }
+
+            }
         }
     }
 }
