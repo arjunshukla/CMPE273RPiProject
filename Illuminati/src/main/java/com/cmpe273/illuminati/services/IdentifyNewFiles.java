@@ -5,5 +5,9 @@ package com.cmpe273.illuminati.services;
  */
 public class IdentifyNewFiles {
 
+    public void nefiles(){
+
+    }
+
 
 }
