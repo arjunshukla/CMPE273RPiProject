@@ -50,7 +50,7 @@ public class DropboxServiceImpl extends HttpServlet implements DropboxService {
         File folder = new File("D:/HelloFeatureIDE");
         System.out.println("Reading files under the folder "+ folder.getAbsolutePath());
         listFilesForFolder(folder, client);
-/*        File inputFile = new File(file.getName());
+/*      File inputFile = new File(file.getName());
         FileInputStream inputStream = new FileInputStream(inputFile);
         try {
             DbxEntry.File uploadedFile = client.uploadFile("/D:/HelloFeatureIDE",
