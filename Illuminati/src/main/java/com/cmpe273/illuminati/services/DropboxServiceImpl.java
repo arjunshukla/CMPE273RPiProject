@@ -47,7 +47,7 @@ public class DropboxServiceImpl extends HttpServlet implements DropboxService {
 
     @Override
     public void upload(DbxClient client) throws IOException, DbxException {
-        File folder = new File("D:/HelloFeatureIDE");
+        File folder = new File("/Volumes/WININSTALL");
         System.out.println("Reading files under the folder "+ folder.getAbsolutePath());
         listFilesForFolder(folder, client);
 /*      File inputFile = new File(file.getName());

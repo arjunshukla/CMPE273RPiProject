@@ -13,9 +13,24 @@ import java.util.List;
 
 @Service
 public class GetFolderInfoForMediaServiceImpl implements GetFolderInfoForMediaService{
-    /**
-     * Checks for the new file added in Local drive
-     * @return array list of new files
+
+
+    /*
+            function to test
+     */
+
+    @Override
+    public void getFolderInfoFromMedia(){
+        List<File> fileList;
+        fileList=getFilelistFromMedia("/Volumes/WININSTALL");
+        System.out.println("Files under : /Volumes/WININSTALL : " );
+        displayFolderInfo(fileList);
+    }
+
+
+
+    /*
+            returns the list of files and folder under given directory
      */
 
     @Override
@@ -27,14 +42,6 @@ public class GetFolderInfoForMediaServiceImpl implements GetFolderInfoForMediaSe
             fileList.add(file);
         }
         return fileList;
-    }
-
-    @Override
-    public void getFolderInfoFromMedia(){
-        List<File> fileList;
-        fileList=getFilelistFromMedia("/Users/praveenkarkhile/Documents/MortgageApplication");
-        System.out.println("Files under : /Users/praveenkarkhile/MortgageApplication : " );
-        displayFolderInfo(fileList);
     }
 
     @Override

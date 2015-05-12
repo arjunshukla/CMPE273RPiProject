@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,21 +18,29 @@ import java.util.List;
 @Service
 public class GetFolderInfoForDrpBoxServiceImpl implements GetFolderInfoForDrpBoxService{
 
-    @Override
-    public void getFolderInfoFromDrpBox() throws IOException, DbxException {
-        List<File> fileList;
-        DbxClient dbxclient= ProjectUtil.authorize();
-        DbxEntry.WithChildren listing = dbxclient.getMetadataWithChildren("/");
-        System.out.println("Files in the root path:");
-        for (DbxEntry child : listing.children) {
-            System.out.println("	" + child.name + ": " + child.toString());
-        }
-    }
+    /*
+            function to test
+     */
 
     @Override
-    public List<File>  getFilelistFromDrpBox(String directoryName) throws IOException, DbxException {
-        getFolderInfoFromDrpBox();
-        return null;
+    public DbxEntry.WithChildren getFolderInfoFromDrpBox() throws IOException, DbxException {
+        DbxEntry.WithChildren listing = getFilelistFromDrpBox("/Volumes/WININSTALL");
+        for(DbxEntry child: listing.children){
+
+            System.out.println(child);
+        }
+        return listing;
+    }
+
+    /*
+            returns the list of files and folder under given directory
+     */
+
+    @Override
+    public DbxEntry.WithChildren getFilelistFromDrpBox(String directoryName) throws IOException, DbxException {
+        DbxClient dbxclient= ProjectUtil.authorize();
+        DbxEntry.WithChildren list= dbxclient.getMetadataWithChildren(directoryName);;
+        return list;
     }
 
     public DbxClient getDroboxClient() throws IOException, DbxException {
