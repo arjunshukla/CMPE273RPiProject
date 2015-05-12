@@ -1,5 +1,6 @@
 com/cmpe273/illuminati/Controller/MainController.class
 com/cmpe273/illuminati/services/DropboxServiceImpl.class
 com/cmpe273/illuminati/services/DropboxService.class
-com/cmpe273/illuminati/services/IdentifyNewFiles.class
 com/cmpe273/illuminati/MainConf.class
+com/cmpe273/illuminati/services/GetFolderInfoService.class
+com/cmpe273/illuminati/services/GetFolderInfoServiceImpl.class

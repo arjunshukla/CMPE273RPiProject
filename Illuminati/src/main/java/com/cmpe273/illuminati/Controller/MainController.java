@@ -1,6 +1,8 @@
 package com.cmpe273.illuminati.Controller;
 
 import com.cmpe273.illuminati.services.DropboxService;
+import com.cmpe273.illuminati.services.GetFolderInfoForDrpBoxService;
+import com.cmpe273.illuminati.services.GetFolderInfoForMediaService;
 import com.dropbox.core.DbxClient;
 import com.dropbox.core.DbxException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,12 @@ public class MainController {
     @Autowired
     DropboxService dropboxService;
 
+    @Autowired
+    GetFolderInfoForMediaService getFolderInfoForMedia;
+
+    @Autowired
+    GetFolderInfoForDrpBoxService getFolderInfoForDrpBox;
+
     @RequestMapping("/authorize")
     // Get your app key and secret from the Dropbox developers website.
     public void authorization() throws ServletException, IOException, DbxException {
@@ -40,5 +48,15 @@ public class MainController {
     @RequestMapping("/download")
     public void  downloadFile(DbxClient client) throws IOException, DbxException {
         dropboxService.download(client);
+    }
+
+    @RequestMapping("/getFilesInfoFromMedia")
+    public void getFilesFromMedia()throws IOException, DbxException {
+        getFolderInfoForMedia.getFolderInfoFromMedia();
+    }
+
+    @RequestMapping("/getFilesInfoFromDrpBox")
+    public void getFilesfromDrpBox()throws IOException, DbxException {
+        getFolderInfoForDrpBox.getFolderInfoFromDrpBox();
     }
 }
