@@ -1,0 +1,8 @@
+*.xml
+*.DS_Store
+*.class
+**/*.DS_Storie
+target/
+../illuminati.iml
+../.idea/workspace.xml
+

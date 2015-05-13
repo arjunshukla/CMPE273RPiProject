@@ -10,11 +10,8 @@ import java.util.List;
  * Created by praveenkarkhile on 5/9/15.
  */
 
-
 @Service
 public class GetFolderInfoForMediaServiceImpl implements GetFolderInfoForMediaService{
-
-
     /*
             function to test
      */
@@ -26,8 +23,6 @@ public class GetFolderInfoForMediaServiceImpl implements GetFolderInfoForMediaSe
         System.out.println("Files under : /Volumes/WININSTALL : " );
         displayFolderInfo(fileList);
     }
-
-
 
     /*
             returns the list of files and folder under given directory
