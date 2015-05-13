@@ -10,10 +10,4 @@ public interface CompareMetaDataService {
 
 public ArrayList<String>[] returnFileListToUploadAndDownload();
 
-    ArrayList<String> arrListServer = new ArrayList<String>();
-    ArrayList<String> arrListLocal = new ArrayList<String>();
-
-//    name(File var)
-
-
 }

@@ -16,6 +16,9 @@ public class CompareMetaDataServiceImpl implements CompareMetaDataService {
             3. return the result as an array of ArrayLists to Sneha for upload and download operations
         */
 
+        ArrayList<String> arrListServer = new ArrayList<String>();
+        ArrayList<String> arrListLocal = new ArrayList<String>();
+
 
         return null;//new ArrayList<String>();
     }
