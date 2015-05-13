@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2707CF71AE2CEEB009A2DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2707CF61AE2CEEB009A2DBF /* AppDelegate.swift */; };
+		F2707CF91AE2CEEB009A2DBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2707CF81AE2CEEB009A2DBF /* ViewController.swift */; };
+		F2707CFC1AE2CEEB009A2DBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2707CFA1AE2CEEB009A2DBF /* Main.storyboard */; };
+		F2707CFE1AE2CEEB009A2DBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2707CFD1AE2CEEB009A2DBF /* Images.xcassets */; };
+		F2707D011AE2CEEB009A2DBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2707CFF1AE2CEEB009A2DBF /* LaunchScreen.xib */; };
+		F2707D0D1AE2CEEB009A2DBF /* CMPE273RpiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2707D0C1AE2CEEB009A2DBF /* CMPE273RpiTests.swift */; };
+		F2707D181AE2D501009A2DBF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2707D161AE2D501009A2DBF /* icon.png */; };
+		F2707D191AE2D501009A2DBF /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F2707D171AE2D501009A2DBF /* background.png */; };
+		F2707D1C1AE2D66B009A2DBF /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F2707D1B1AE2D66B009A2DBF /* bg.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2707D071AE2CEEB009A2DBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2707CE91AE2CEEB009A2DBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2707CF01AE2CEEB009A2DBF;
+			remoteInfo = CMPE273Rpi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F2707CF11AE2CEEB009A2DBF /* CMPE273Rpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMPE273Rpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2707CF51AE2CEEB009A2DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2707CF61AE2CEEB009A2DBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2707CF81AE2CEEB009A2DBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F2707CFB1AE2CEEB009A2DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2707CFD1AE2CEEB009A2DBF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F2707D001AE2CEEB009A2DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F2707D061AE2CEEB009A2DBF /* CMPE273RpiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMPE273RpiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2707D0B1AE2CEEB009A2DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2707D0C1AE2CEEB009A2DBF /* CMPE273RpiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMPE273RpiTests.swift; sourceTree = "<group>"; };
+		F2707D161AE2D501009A2DBF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		F2707D171AE2D501009A2DBF /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		F2707D1B1AE2D66B009A2DBF /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2707CEE1AE2CEEB009A2DBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2707D031AE2CEEB009A2DBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2707CE81AE2CEEB009A2DBF = {
+			isa = PBXGroup;
+			children = (
+				F2707D1A1AE2D507009A2DBF /* images */,
+				F2707CF31AE2CEEB009A2DBF /* CMPE273Rpi */,
+				F2707D091AE2CEEB009A2DBF /* CMPE273RpiTests */,
+				F2707CF21AE2CEEB009A2DBF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2707CF21AE2CEEB009A2DBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2707CF11AE2CEEB009A2DBF /* CMPE273Rpi.app */,
+				F2707D061AE2CEEB009A2DBF /* CMPE273RpiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2707CF31AE2CEEB009A2DBF /* CMPE273Rpi */ = {
+			isa = PBXGroup;
+			children = (
+				F2707CF61AE2CEEB009A2DBF /* AppDelegate.swift */,
+				F2707CF81AE2CEEB009A2DBF /* ViewController.swift */,
+				F2707CFA1AE2CEEB009A2DBF /* Main.storyboard */,
+				F2707CFD1AE2CEEB009A2DBF /* Images.xcassets */,
+				F2707CFF1AE2CEEB009A2DBF /* LaunchScreen.xib */,
+				F2707CF41AE2CEEB009A2DBF /* Supporting Files */,
+			);
+			path = CMPE273Rpi;
+			sourceTree = "<group>";
+		};
+		F2707CF41AE2CEEB009A2DBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2707CF51AE2CEEB009A2DBF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2707D091AE2CEEB009A2DBF /* CMPE273RpiTests */ = {
+			isa = PBXGroup;
+			children = (
+				F2707D0C1AE2CEEB009A2DBF /* CMPE273RpiTests.swift */,
+				F2707D0A1AE2CEEB009A2DBF /* Supporting Files */,
+			);
+			path = CMPE273RpiTests;
+			sourceTree = "<group>";
+		};
+		F2707D0A1AE2CEEB009A2DBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2707D0B1AE2CEEB009A2DBF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2707D1A1AE2D507009A2DBF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F2707D1B1AE2D66B009A2DBF /* bg.png */,
+				F2707D161AE2D501009A2DBF /* icon.png */,
+				F2707D171AE2D501009A2DBF /* background.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2707CF01AE2CEEB009A2DBF /* CMPE273Rpi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2707D101AE2CEEB009A2DBF /* Build configuration list for PBXNativeTarget "CMPE273Rpi" */;
+			buildPhases = (
+				F2707CED1AE2CEEB009A2DBF /* Sources */,
+				F2707CEE1AE2CEEB009A2DBF /* Frameworks */,
+				F2707CEF1AE2CEEB009A2DBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CMPE273Rpi;
+			productName = CMPE273Rpi;
+			productReference = F2707CF11AE2CEEB009A2DBF /* CMPE273Rpi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2707D051AE2CEEB009A2DBF /* CMPE273RpiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2707D131AE2CEEB009A2DBF /* Build configuration list for PBXNativeTarget "CMPE273RpiTests" */;
+			buildPhases = (
+				F2707D021AE2CEEB009A2DBF /* Sources */,
+				F2707D031AE2CEEB009A2DBF /* Frameworks */,
+				F2707D041AE2CEEB009A2DBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2707D081AE2CEEB009A2DBF /* PBXTargetDependency */,
+			);
+			name = CMPE273RpiTests;
+			productName = CMPE273RpiTests;
+			productReference = F2707D061AE2CEEB009A2DBF /* CMPE273RpiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2707CE91AE2CEEB009A2DBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = CMPE277;
+				TargetAttributes = {
+					F2707CF01AE2CEEB009A2DBF = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					F2707D051AE2CEEB009A2DBF = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = F2707CF01AE2CEEB009A2DBF;
+					};
+				};
+			};
+			buildConfigurationList = F2707CEC1AE2CEEB009A2DBF /* Build configuration list for PBXProject "CMPE273Rpi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2707CE81AE2CEEB009A2DBF;
+			productRefGroup = F2707CF21AE2CEEB009A2DBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2707CF01AE2CEEB009A2DBF /* CMPE273Rpi */,
+				F2707D051AE2CEEB009A2DBF /* CMPE273RpiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2707CEF1AE2CEEB009A2DBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2707D191AE2D501009A2DBF /* background.png in Resources */,
+				F2707D181AE2D501009A2DBF /* icon.png in Resources */,
+				F2707CFC1AE2CEEB009A2DBF /* Main.storyboard in Resources */,
+				F2707D011AE2CEEB009A2DBF /* LaunchScreen.xib in Resources */,
+				F2707D1C1AE2D66B009A2DBF /* bg.png in Resources */,
+				F2707CFE1AE2CEEB009A2DBF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2707D041AE2CEEB009A2DBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2707CED1AE2CEEB009A2DBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2707CF91AE2CEEB009A2DBF /* ViewController.swift in Sources */,
+				F2707CF71AE2CEEB009A2DBF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2707D021AE2CEEB009A2DBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2707D0D1AE2CEEB009A2DBF /* CMPE273RpiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2707D081AE2CEEB009A2DBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2707CF01AE2CEEB009A2DBF /* CMPE273Rpi */;
+			targetProxy = F2707D071AE2CEEB009A2DBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F2707CFA1AE2CEEB009A2DBF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2707CFB1AE2CEEB009A2DBF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2707CFF1AE2CEEB009A2DBF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2707D001AE2CEEB009A2DBF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2707D0E1AE2CEEB009A2DBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F2707D0F1AE2CEEB009A2DBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2707D111AE2CEEB009A2DBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CMPE273Rpi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F2707D121AE2CEEB009A2DBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CMPE273Rpi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F2707D141AE2CEEB009A2DBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CMPE273RpiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CMPE273Rpi.app/CMPE273Rpi";
+			};
+			name = Debug;
+		};
+		F2707D151AE2CEEB009A2DBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CMPE273RpiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CMPE273Rpi.app/CMPE273Rpi";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2707CEC1AE2CEEB009A2DBF /* Build configuration list for PBXProject "CMPE273Rpi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2707D0E1AE2CEEB009A2DBF /* Debug */,
+				F2707D0F1AE2CEEB009A2DBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2707D101AE2CEEB009A2DBF /* Build configuration list for PBXNativeTarget "CMPE273Rpi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2707D111AE2CEEB009A2DBF /* Debug */,
+				F2707D121AE2CEEB009A2DBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F2707D131AE2CEEB009A2DBF /* Build configuration list for PBXNativeTarget "CMPE273RpiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2707D141AE2CEEB009A2DBF /* Debug */,
+				F2707D151AE2CEEB009A2DBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2707CE91AE2CEEB009A2DBF /* Project object */;
+}
