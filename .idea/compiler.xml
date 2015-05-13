@@ -22,11 +22,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="Illuminati" />
         <module name="illuminati" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="illuminati" target="1.6" />
+      <module name="Illuminati" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -23,7 +23,7 @@ public class GetFolderInfoForDrpBoxServiceImpl implements GetFolderInfoForDrpBox
     @Override
     public List<DbxEntry> getFolderInfoFromDrpBox() throws IOException, DbxException {
         List<DbxEntry> fileList=new ArrayList<DbxEntry>();
-        fileList = getFilelistFromDrpBox("/",fileList);
+        fileList = getFilelistFromDrpBox("/Volumes/WININSTALL",fileList);
 
 
         displayFolderInfo(fileList);
@@ -54,7 +54,12 @@ public class GetFolderInfoForDrpBoxServiceImpl implements GetFolderInfoForDrpBox
     public void displayFolderInfo(List<DbxEntry> fileList){
 
         for(DbxEntry file:fileList){
-            System.out.println(file.path);
+            if(file.isFile())
+            System.out.println("From Dropbox: "+file.path + "Modified at: "+ file.asFile().lastModified);
+            else
+            {
+                System.out.println("From Dropbox: "+file.path);
+            }
         }
     }
 

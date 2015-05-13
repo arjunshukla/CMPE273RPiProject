@@ -29,18 +29,19 @@ public class MainController {
 
     @Autowired
     GetFolderInfoForDrpBoxService getFolderInfoForDrpBox;
+
     @Autowired
     CompareMetaDataService compareMetaDataService;
 
-    @RequestMapping("/authorize")
+/*    @RequestMapping("/authorize")
     // Get your app key and secret from the Dropbox developers website.
     public void authorization() throws ServletException, IOException, DbxException {
         dropboxService.authorize();
-        }
+        }*/
 
     @RequestMapping("/upload")
-    public void uploadfile(DbxClient client) throws IOException, DbxException {
-        dropboxService.upload(client);
+    public void uploadfile() throws IOException, DbxException {
+        dropboxService.upload();
     }
 
     @RequestMapping("/getMetadata")
@@ -49,8 +50,8 @@ public class MainController {
     }
 
     @RequestMapping("/download")
-    public void  downloadFile(DbxClient client) throws IOException, DbxException {
-        dropboxService.download(client);
+    public void  downloadFile() throws IOException, DbxException {
+        dropboxService.download();
     }
 
     @RequestMapping("/getFilesInfoFromMedia")
@@ -63,7 +64,7 @@ public class MainController {
         getFolderInfoForDrpBox.getFolderInfoFromDrpBox();
     }
 
-    @RequestMapping("/testForArjun")
+    @RequestMapping("/compareMetaData")
     public String testForArjun_CompareMetaDataService(){
         try {
             compareMetaDataService.returnFileListToUploadAndDownload();

@@ -6,11 +6,13 @@ package com.cmpe273.illuminati.services;
 
 import com.dropbox.core.DbxException;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public interface CompareMetaDataService {
 
-public ArrayList<String>[] returnFileListToUploadAndDownload() throws IOException, DbxException;
+public List<File> returnFileListToUploadAndDownload() throws IOException, DbxException;
 
 }

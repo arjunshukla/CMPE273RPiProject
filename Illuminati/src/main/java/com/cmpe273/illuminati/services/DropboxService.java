@@ -9,11 +9,10 @@ import java.io.IOException;
  * Created by ASHU on 16-04-2015.
  */
 public interface DropboxService {
-    void authorize() throws IOException, DbxException;
 
-    void upload(DbxClient client) throws IOException, DbxException;
+    void upload() throws IOException, DbxException;
 
     void getMetadata(DbxClient client) throws DbxException;
 
-    void download(DbxClient client)throws IOException, DbxException;
+    void download()throws IOException, DbxException;
 }
