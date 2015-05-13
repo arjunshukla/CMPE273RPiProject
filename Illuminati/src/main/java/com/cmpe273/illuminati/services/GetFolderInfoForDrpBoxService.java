@@ -3,7 +3,6 @@ package com.cmpe273.illuminati.services;
 import com.dropbox.core.DbxEntry;
 import com.dropbox.core.DbxException;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -12,7 +11,6 @@ import java.util.List;
  */
 public interface GetFolderInfoForDrpBoxService {
 
-    public DbxEntry.WithChildren getFolderInfoFromDrpBox() throws IOException, DbxException;
-    public DbxEntry.WithChildren getFilelistFromDrpBox(String directoryName) throws IOException, DbxException;
+    public List<DbxEntry> getFolderInfoFromDrpBox() throws IOException, DbxException;
 
 }
