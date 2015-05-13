@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var lblConsole: UILabel!
+    @IBOutlet weak var lblConsoleHeader: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,9 +32,12 @@ class ViewController: UIViewController {
             println(NSString(data: data, encoding: NSUTF8StringEncoding))
             let strConsoleLog = NSString(data:data, encoding:NSUTF8StringEncoding)
             self.lblConsole.text = strConsoleLog as String!
+            
         }
         
         task.resume()
+        self.lblConsole.hidden = false
+        self.lblConsoleHeader.hidden = false
     }
 
     
