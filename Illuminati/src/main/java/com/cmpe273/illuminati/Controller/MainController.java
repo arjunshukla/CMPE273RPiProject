@@ -40,28 +40,33 @@ public class MainController {
         }*/
 
     @RequestMapping("/upload")
-    public void uploadfile() throws IOException, DbxException {
+    public String uploadfile() throws IOException, DbxException {
         dropboxService.upload();
+        return "Success";
     }
 
     @RequestMapping("/getMetadata")
-    public void getMetadata(DbxClient client) throws DbxException {
+    public String getMetadata(DbxClient client) throws DbxException {
         dropboxService.getMetadata(client);
+        return "Success";
     }
 
     @RequestMapping("/download")
-    public void  downloadFile() throws IOException, DbxException {
+    public String  downloadFile() throws IOException, DbxException {
         dropboxService.download();
+        return "Success";
     }
 
     @RequestMapping("/getFilesInfoFromMedia")
-    public void getFilesFromMedia()throws IOException, DbxException {
+    public String getFilesFromMedia()throws IOException, DbxException {
         getFolderInfoForMedia.getFolderInfoFromMedia();
+        return "Success";
     }
 
     @RequestMapping("/getFilesInfoFromDrpBox")
-    public void getFilesfromDrpBox()throws IOException, DbxException {
+    public String getFilesfromDrpBox()throws IOException, DbxException {
         getFolderInfoForDrpBox.getFolderInfoFromDrpBox();
+        return "Success";
     }
 
     @RequestMapping("/compareMetaData")

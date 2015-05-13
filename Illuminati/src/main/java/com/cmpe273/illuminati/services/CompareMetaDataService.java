@@ -13,6 +13,6 @@ import java.util.List;
 
 public interface CompareMetaDataService {
 
-public List<File> returnFileListToUploadAndDownload() throws IOException, DbxException;
+public void returnFileListToUploadAndDownload() throws IOException, DbxException;
 
 }

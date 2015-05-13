@@ -29,7 +29,7 @@ public class CompareMetaDataServiceImpl implements CompareMetaDataService {
     DropboxServiceImpl dropboxService = new DropboxServiceImpl();
 
     @Override
-    public List<File> returnFileListToUploadAndDownload() throws IOException, DbxException {
+    public void returnFileListToUploadAndDownload() throws IOException, DbxException {
         /*  Method implementation:
             1. Call Praveen’s method to get deltas as arrayList for upload and download
             2. Identify the modified files from given delta ArratLists
@@ -81,11 +81,71 @@ public class CompareMetaDataServiceImpl implements CompareMetaDataService {
                 }
             }
         }
-
-
-
-        return null;
+        foundNewFilesinMedia();
+        foundNewFilesinDropbox();
     }
 
+    public void foundNewFilesinMedia() throws IOException, DbxException{
+        Boolean flag = false;
+        List<File> localFileList;
+        localFileList = getFolderInfoForMediaService.getFolderInfoFromMedia();
 
+        List<DbxEntry> dropBoxFileList;
+        dropBoxFileList = getFolderInfoForDrpBoxService.getFolderInfoFromDrpBox();
+
+        for(File file: localFileList) {
+            for (DbxEntry dbxEntry : dropBoxFileList) {
+                if (file.getAbsolutePath().equals(dbxEntry.path.toString())) {
+                    flag = true;
+                }
+            }
+            if(flag == false)
+            {
+                FileInputStream inputStream = new FileInputStream(file.getAbsoluteFile());
+                try {
+                    DbxEntry.File uploadedFile = ProjectUtil.authorize().uploadFile(file.getAbsolutePath(),
+                            DbxWriteMode.add(), file.length(), inputStream);
+                    System.out.println("Uploaded: " + uploadedFile.toString());
+                } finally {
+                    inputStream.close();
+                }
+            }
+            else
+            {
+                flag = false;
+            }
+        }
+    }
+
+    public void foundNewFilesinDropbox() throws IOException, DbxException{
+        Boolean flag = false;
+        List<File> localFileList;
+        localFileList = getFolderInfoForMediaService.getFolderInfoFromMedia();
+
+        List<DbxEntry> dropBoxFileList;
+        dropBoxFileList = getFolderInfoForDrpBoxService.getFolderInfoFromDrpBox();
+
+        for(DbxEntry dbxEntry : dropBoxFileList) {
+            for (File file: localFileList) {
+                if (file.getAbsolutePath().equals(dbxEntry.path.toString())) {
+                    flag = true;
+                }
+            }
+            if(flag == false)
+            {
+                FileOutputStream outputStream = new FileOutputStream(dbxEntry.asFile().path);
+                try {
+                    DbxEntry.File downloadedFile = ProjectUtil.authorize().getFile(dbxEntry.asFile().path, null,
+                            outputStream);
+                    System.out.println("Metadata: " + downloadedFile.toString());
+                } finally {
+                    outputStream.close();
+                }
+            }
+            else
+            {
+                flag = false;
+            }
+        }
+    }
 }
