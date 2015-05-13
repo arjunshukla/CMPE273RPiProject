@@ -4,8 +4,6 @@ import com.dropbox.core.DbxClient;
 import com.dropbox.core.DbxEntry;
 import com.dropbox.core.DbxException;
 import org.springframework.stereotype.Service;
-
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,25 +21,43 @@ public class GetFolderInfoForDrpBoxServiceImpl implements GetFolderInfoForDrpBox
      */
 
     @Override
-    public DbxEntry.WithChildren getFolderInfoFromDrpBox() throws IOException, DbxException {
-        DbxEntry.WithChildren listing = getFilelistFromDrpBox("/Volumes/WININSTALL");
-        for(DbxEntry child: listing.children){
+    public List<DbxEntry> getFolderInfoFromDrpBox() throws IOException, DbxException {
+        List<DbxEntry> fileList=new ArrayList<DbxEntry>();
+        fileList = getFilelistFromDrpBox("/",fileList);
 
-            System.out.println(child);
-        }
-        return listing;
+
+        displayFolderInfo(fileList);
+
+        return fileList;
     }
 
     /*
             returns the list of files and folder under given directory
      */
 
-    @Override
-    public DbxEntry.WithChildren getFilelistFromDrpBox(String directoryName) throws IOException, DbxException {
+    public List<DbxEntry> getFilelistFromDrpBox(String directoryName, List<DbxEntry> fileList) throws IOException, DbxException {
         DbxClient dbxclient= ProjectUtil.authorize();
-        DbxEntry.WithChildren list= dbxclient.getMetadataWithChildren(directoryName);;
-        return list;
+        DbxEntry.WithChildren list= dbxclient.getMetadataWithChildren(directoryName);
+        for(DbxEntry child: list.children){
+            if(child.isFolder()){
+                fileList.add(child);
+                getFilelistFromDrpBox(child.path.toString(),fileList);
+            }else{
+                if(child.isFile()){
+                    fileList.add(child);
+                }
+            }
+        }
+        return fileList;
     }
+
+    public void displayFolderInfo(List<DbxEntry> fileList){
+
+        for(DbxEntry file:fileList){
+            System.out.println(file.path);
+        }
+    }
+
 
     public DbxClient getDroboxClient() throws IOException, DbxException {
         DbxClient dbxclient= ProjectUtil.authorize();

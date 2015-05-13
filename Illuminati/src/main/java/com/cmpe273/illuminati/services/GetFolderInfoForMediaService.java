@@ -7,9 +7,7 @@ import java.io.*;
  */
 public interface GetFolderInfoForMediaService {
 
-    public List<File>  getFilelistFromMedia(String directoryName);
     public void displayFolderInfo(List<File> fileList);
-    public void getFolderInfoFromMedia();
-
+    public List<File> getFolderInfoFromMedia()  throws IOException;
 
 }

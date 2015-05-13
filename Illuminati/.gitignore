@@ -3,6 +3,7 @@
 *.class
 **/*.DS_Storie
 target/
-../illuminati.iml
-../.idea/workspace.xml
+illuminati.iml
+workspace.xml
+
 
