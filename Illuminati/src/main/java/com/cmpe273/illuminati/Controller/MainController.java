@@ -1,9 +1,9 @@
 package com.cmpe273.illuminati.Controller;
 
+import com.cmpe273.illuminati.services.CompareMetaDataService;
 import com.cmpe273.illuminati.services.DropboxService;
 import com.cmpe273.illuminati.services.GetFolderInfoForDrpBoxService;
 import com.cmpe273.illuminati.services.GetFolderInfoForMediaService;
-import com.cmpe273.illuminati.services.SyncFilesService;
 import com.dropbox.core.DbxClient;
 import com.dropbox.core.DbxException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Created by ASHU on 16-04-2015.
@@ -30,9 +29,8 @@ public class MainController {
 
     @Autowired
     GetFolderInfoForDrpBoxService getFolderInfoForDrpBox;
-
     @Autowired
-    SyncFilesService syncFilesService;
+    CompareMetaDataService compareMetaDataService;
 
     @RequestMapping("/authorize")
     // Get your app key and secret from the Dropbox developers website.
@@ -65,19 +63,17 @@ public class MainController {
         getFolderInfoForDrpBox.getFolderInfoFromDrpBox();
     }
 
-    @RequestMapping("/downloadFromDropbox")
-    public void downloadFromDropbox(DbxClient client,
-                                    ArrayList<String> filesToDownload)throws IOException,
-            DbxException {
-        syncFilesService.downloadFromDropbox(client,
-                filesToDownload);
-    }
-
-    @RequestMapping("/uploadToDropbox")
-    public void uploadToDropbox(DbxClient client,
-                                ArrayList<String> filesToDownload)throws IOException,
-            DbxException {
-        syncFilesService.uploadToDropbox(client,
-                filesToDownload);
+    @RequestMapping("/testForArjun")
+    public String testForArjun_CompareMetaDataService(){
+        try {
+            compareMetaDataService.returnFileListToUploadAndDownload();
+            return "Success";
+        } catch (IOException e) {
+            e.printStackTrace();
+            return e.getMessage();
+        } catch (DbxException e) {
+            e.printStackTrace();
+            return e.getMessage();
+        }
     }
 }

@@ -47,7 +47,8 @@ public class DropboxServiceImpl extends HttpServlet implements DropboxService {
 
     @Override
     public void upload(DbxClient client) throws IOException, DbxException {
-        File folder = new File("/Volumes/WININSTALL");
+        File folder = new File("Volumes/YOSEMITE/Users/arjunshukla/Dropbox/Public");//"/Volumes/WININSTALL");
+//        /Users/arjunshukla/Dropbox
         System.out.println("Reading files under the folder "+ folder.getAbsolutePath());
         listFilesForFolder(folder, client);
 /*      File inputFile = new File(file.getName());

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C79F415C-D9C2-4337-B0BF-CCA7A96836AA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CMPE273Rpi</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A08027AA3583F08CB46984746C1773865DC8A577</key>
+		<string>https://github.com/arjunshukla/CMPE273RPiProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/CMPE273Rpi/CMPE273Rpi.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A08027AA3583F08CB46984746C1773865DC8A577</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/arjunshukla/CMPE273RPiProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A08027AA3583F08CB46984746C1773865DC8A577</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A08027AA3583F08CB46984746C1773865DC8A577</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CMPE273RPiProject</string>
+		</dict>
+	</array>
+</dict>
+</plist>
