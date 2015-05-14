@@ -429,6 +429,7 @@
 				F2707D121AE2CEEB009A2DBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2707D131AE2CEEB009A2DBF /* Build configuration list for PBXNativeTarget "CMPE273RpiTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +438,7 @@
 				F2707D151AE2CEEB009A2DBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

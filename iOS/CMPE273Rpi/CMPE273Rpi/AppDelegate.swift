@@ -3,7 +3,7 @@
 //  CMPE273Rpi
 //
 //  Created by Arjun Shukla on 4/18/15.
-//  Copyright (c) 2015 CMPE277. All rights reserved.
+//  Copyright (c) 2015 CMPE273. All rights reserved.
 //
 
 import UIKit
