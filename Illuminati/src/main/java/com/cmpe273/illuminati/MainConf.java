@@ -9,7 +9,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @Configuration
 @EnableAutoConfiguration
-@EnableScheduling
 @ComponentScan
 public class MainConf {
 
